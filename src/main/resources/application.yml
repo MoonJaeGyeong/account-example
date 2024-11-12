@@ -1,0 +1,29 @@
+spring:
+  h2:
+    console:
+      enabled: true  # H2 Console? ???? ?? (H2 Console? H2 Database? UI? ????? ??)
+      path: /h2-console  # H2 Console? Path
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:db;MODE=MYSQL
+    username: sa
+    password:
+  jpa:
+    generate-ddl: 'true'
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true # sql ? ?? jpql ??????  ???? ??
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+
+
+jwt:
+  secret:
+    key: 68ba9b63f20026c68b4513f15131a61d2821e35f5b3e322ead18f26c889dece0e90faa0c63236fa3f4db8fde1467590afe0370e9896bf03f220d473ac37a785d
